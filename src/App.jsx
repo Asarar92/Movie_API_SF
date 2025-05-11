@@ -1,16 +1,17 @@
+// App.jsx
 import React, { useState } from 'react'
 import Header from './components/Header'
-import MoviesCardList from "./components/MoviesCardList"
+import { Outlet } from 'react-router-dom'
+import './App.css' 
 
-
-import './App.css'
 
 const App = () => {
-  const [query,setQuery] = useState('')
+  const [query, setQuery] = useState('')
+
   return (
     <div>
-        <Header setQuery={setQuery}/>
-        <MoviesCardList query={query}/>
+      <Header setQuery={setQuery} />
+      <Outlet context={{ query }} />
     </div>
   )
 }

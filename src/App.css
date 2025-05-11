@@ -7,23 +7,90 @@ body {
     font-family: "Source Sans Pro", Arial, sans-serif,cursive;
 }
 
+/* header layout */
 .header-container {
-    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
-    padding-inline: 24px;
-    position: sticky;
-    backdrop-filter : blur(10px);
-    top: 0;
-    margin-bottom: 32px;
-    z-index: 1;
-  }
+  height: 65px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding-inline: 24px;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: #032541;
+  z-index: 10;
+  color: white;
+  display: flex;
+  align-items: center;
+}
 
-  .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin-inline: auto;
-  }
+.header-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+/* nav placeholder */
+.nav-links span {
+  margin: 0 12px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: white;
+  cursor: pointer;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* or whatever spacing you prefer */
+}
+
+
+
+/* search */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 1.1rem;
+  color: white;
+}
+
+/* when closed, hide the input completely */
+.search-container .search-input {
+  width: 0;
+  opacity: 0;
+  transition: width 0.2s ease-out, opacity 0.2s ease-out;
+  border: none;
+  outline: none;
+  padding: 8px 0 8px 8px;
+  font-size: 0.9rem;
+}
+
+/* when open, slide it out */
+.search-container.open .search-input {
+  width: 200px;
+  opacity: 1;
+  transition: width 0.25s ease-in, opacity 0.25s ease-in;
+  border-bottom: 1px solid #ccc;
+  margin-left: 4px;
+  background: transparent;
+  color : white
+}
+
+.search-input::placeholder {
+  color: #ccc;
+}
+
   
  .movies-container {
   max-width: 1200px;
@@ -34,41 +101,6 @@ body {
   gap: 32px;
   justify-content: center;   
   padding-inline: 16px;      
-}
-
-.search-filter-container {
-  max-width: 1200px;
-  margin-inline: auto;
-  margin-top: 16px;
-  margin-bottom: 48px;
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.search-container {
-  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
-  max-width: 350px;
-  width: 100%;
-  border-radius: 4px;
-  padding-left: 24px;
-  color: #999;
-  overflow: hidden;
-  background-color:  white;
-  color: inherit;
-}
-
-.search-container input {
-  border: none;
-  outline: none;
-  padding: 16px;
-  width: 90%;
-  background-color: inherit;
-  color: inherit;
-}
-
-.search-container input::placeholder {
-  color: #999;
 }
 
 .movies-card {

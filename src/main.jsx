@@ -1,22 +1,30 @@
+// main.jsx
 import { createRoot } from 'react-dom/client'
 import App from './App'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Moveidetails from './components/Moveidetails'
-
-// import Home from './components/Home'
-
+import MovieDetails from './components/Moveidetails'
+import MoviesCardList from './components/MoviesCardList'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />, 
+    element: <App />,
+    children: [
+      {
+        path: '/',
+        element: <MoviesCardList />,
+      },
+      {
+        path: '/:country',
+        element: <MovieDetails />,
+      },
+    ],
   },
   {
     path: '/moviedetail',
-    element: <Moveidetails />, 
-  }
+    element: <MovieDetails />,
+  },
 ])
 
 const root = createRoot(document.querySelector('#root'))
-
 root.render(<RouterProvider router={router} />)

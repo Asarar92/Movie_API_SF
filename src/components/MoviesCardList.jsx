@@ -1,7 +1,10 @@
 import MoviesCard from './MoviesCard.jsx'
 import moviesOut from '../moviesOut';
-const MoviesCardList = ({query}) => {
+import { useOutletContext } from 'react-router-dom'
 
+const MoviesCardList = () => {
+
+  const { query } = useOutletContext()
 
   return (
     <div className='movies-container'>  
