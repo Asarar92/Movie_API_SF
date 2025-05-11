@@ -14,6 +14,7 @@ const MoviesCardList = () => {
         return (
           < MoviesCard
             key={movies.id}
+            movieID={movies.id}
             movieImg={movies.posterPath}
             title={movies.title}
             date={movies.releaseDate}

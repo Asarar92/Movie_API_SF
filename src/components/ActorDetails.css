@@ -1,0 +1,68 @@
+.actor-page {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.actor-sidebar {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.actor-image {
+  height: 70%;
+  overflow: hidden;
+}
+
+.actor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.actor-info {
+  height: 30%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.actor-info h1,
+.actor-info p {
+  margin: 0.5rem 0;
+}
+
+.actor-films {
+  width: 70%;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.movies-heading {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.actor-films .movie-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.actor-films .movie-poster {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.actor-films .movie-title {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}

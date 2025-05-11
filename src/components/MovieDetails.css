@@ -1,0 +1,192 @@
+.movie-header {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 4rem 2rem;
+  color: white;
+  min-height: 560px;
+}
+
+.movie-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.movie-header-content {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 2rem;
+}
+
+.poster-container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  max-height: 450px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden; 
+}
+
+.movie-text {
+  padding-right: 2rem;
+}
+
+.movie-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.movie-title span {
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.movie-metadata {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.movie-metadata span:not(:last-child)::after {
+  content: "•";
+  margin-left: 1rem;
+}
+
+.user-score {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.user-score span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.score-percent {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #46d369;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tagline {
+  font-style: italic;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.overview h2 {
+  margin-bottom: 1rem;
+}
+
+.overview p {
+  line-height: 1.6;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.play-trailer-btn, .viber-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.play-trailer-btn {
+  background-color: white;
+  color: black;
+}
+
+.play-trailer-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.viber-btn {
+  background-color: #2D3748;
+  color: white;
+}
+
+.viber-btn:hover {
+  background-color: #4A5568;
+}
+
+.movie-details .user-score {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.movie-details .user-score .rating-circle {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+ .cast-section{
+    padding: 1rem 3rem ;
+    margin-inline: auto;
+    background-color: #dce0e4;
+ }
+
+.cast-section-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .movie-header-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .poster-container {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .movie-text {
+    padding-right: 0;
+  }
+}
