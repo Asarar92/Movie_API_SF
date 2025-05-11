@@ -11,9 +11,10 @@ const MoviesCardList = ({query}) => {
         return (
           < MoviesCard
             key={movies.id}
-            flag={movies.posterPath}
+            movieImg={movies.posterPath}
             title={movies.title}
             date={movies.releaseDate}
+            popularity={movies.popularity}
           />
         )
       })}
