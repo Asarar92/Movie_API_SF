@@ -10,7 +10,6 @@ export default function CircularRating({ popularity }) {
  const strokeColor = popularity > 60 ? '#4CAF50' : '#FFC107';
 
   return (
-    // <div className="rating-circle">
     <svg width="36" height="36" viewBox="0 0 36 36">
       <circle
         cx="18"

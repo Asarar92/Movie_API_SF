@@ -6,7 +6,7 @@ import moviesOut from '../moviesOut';
 import movieCast from '../movieCast';
 
 
-const MovieDetails = () => {
+const MovieDetail = () => {
   const { id } = useParams();
   const movieId = Number(id);
   const movie = moviesOut.find(m => m.id === movieId);
@@ -25,6 +25,7 @@ const MovieDetails = () => {
   })
   const popularityPct = Math.round(popularity);
     const castList = movieCast.filter(cast => cast.movieId === movieId);
+    console.log(castList)
 
   return (
     <>
@@ -44,7 +45,6 @@ const MovieDetails = () => {
             <div className="movie-metadata">
               <span>{formattedDate} (US)</span>
               <span>{genres}</span>
-              <span>2h 22m</span>
             </div>
 
             <div className="user-score">
@@ -52,14 +52,7 @@ const MovieDetails = () => {
               <span>User Score</span>
             </div>
 
-            <div className="header-buttons">
-              <button className="play-trailer-btn">
-                ▶ Play Trailer
-              </button>
-              <button className="viber-btn">
-                What's your Vibe
-              </button>
-            </div>
+           
             <div className="overview">
               <h2>Overview</h2>
               <p>{overview}</p>
@@ -74,11 +67,12 @@ const MovieDetails = () => {
              {castList.map(cast => (
           <CastCard
             key={cast.id}
-            actorId={cast.castId}                    
+            actorId={cast.id}                    
             imageUrl={cast.profileImage}
             name={cast.name}
             role={cast.character}
             imageAlt={cast.name}
+            movieId={cast.movieId}
           />
           ))}
           </div>
@@ -89,4 +83,4 @@ const MovieDetails = () => {
   );
 };
 
-export default MovieDetails;
+export default MovieDetail;

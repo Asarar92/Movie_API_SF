@@ -109,13 +109,17 @@
   font-size: 1.1rem;
 }
 
+.overview{
+  margin-top: 4rem;
+}
+
 .overview h2 {
   margin-bottom: 1rem;
 }
 
 .overview p {
   line-height: 1.6;
-  max-width: 100%;
+  max-width: 80%;
   margin-bottom: 2rem;
 }
 
@@ -175,7 +179,6 @@
 
 
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .movie-header-content {
     grid-template-columns: 1fr;

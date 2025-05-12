@@ -10,12 +10,12 @@ export default function SearchBar({ setQuery }) {
     if (open) inputRef.current?.focus();
   }, [open]);
 
-  // Close on outside click
+  
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (containerRef.current && !containerRef.current.contains(event.target)) {
         setOpen(false);
-        setQuery(''); // optionally reset search when closed
+        setQuery(''); 
       }
     };
 

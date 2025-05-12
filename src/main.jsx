@@ -1,9 +1,9 @@
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import MovieDetails from './components/MovieDetails';
+import MovieDetail from './components/MovieDetail';
 import MoviesCardList from './components/MoviesCardList';
-import ActorDetails from './components/ActorDetails';   
+import ActorDetail from './components/ActorDetail';   
 
 const router = createBrowserRouter([
   {
@@ -16,11 +16,11 @@ const router = createBrowserRouter([
       },
       {
         path: '/moviedetail/:id',  
-        element: <MovieDetails />,
+        element: <MovieDetail />,
       },
       {
         path :'//actor/:actorId',
-        element: <ActorDetails />
+        element: <ActorDetail />
       }
     ],
   }

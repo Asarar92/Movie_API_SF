@@ -8,17 +8,17 @@ const MoviesCardList = () => {
 
   return (
     <div className='movies-container'>  
-     {moviesOut .filter((movies) =>
-            movies.title.toLowerCase().includes(query)
-          ).map((movies) => {
+     {moviesOut .filter((movie) =>
+            movie.title.toLowerCase().includes(query)
+          ).map((movie) => {
         return (
           < MoviesCard
-            key={movies.id}
-            movieID={movies.id}
-            movieImg={movies.posterPath}
-            title={movies.title}
-            date={movies.releaseDate}
-            popularity={movies.popularity}
+            key={movie.id}
+            movieID={movie.id}
+            movieImg={movie.posterPath}
+            title={movie.title}
+            date={movie.releaseDate}
+            popularity={movie.popularity}
           />
         )
       })}

@@ -8,7 +8,7 @@ export default function MoviesCard({ movieImg, title, date, popularity , movieID
   return (
   <Link className="movies-card" to={`/moviedetail/${movieID}`}>
       <div className='flag-container'>
-        <img src={movieImg || "https://image.tmdb.org/t/p/w1280/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg"} alt="movie-poster" />
+        <img src={movieImg} alt="movie-poster" />
            <div className="rating-circle">
         <CircularRating popularity={popularity} />
         </div>
