@@ -3,7 +3,9 @@ import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import MovieDetail from './components/MovieDetail';
 import MoviesCardList from './components/MoviesCardList';
-import ActorDetail from './components/ActorDetail';   
+import ActorDetail from './components/ActorDetail';
+import { MovieProvider } from './context/MovieContext';
+
 
 const router = createBrowserRouter([
   {
@@ -27,4 +29,8 @@ const router = createBrowserRouter([
 ]);
 
 const root = createRoot(document.querySelector('#root'));
-root.render(<RouterProvider router={router} />);
+root.render(
+  <MovieProvider>
+    <RouterProvider router={router} />
+  </MovieProvider>
+);

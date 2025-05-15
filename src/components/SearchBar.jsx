@@ -5,7 +5,7 @@ export default function SearchBar({ setQuery }) {
   const inputRef = useRef();
   const containerRef = useRef();
 
-  // Focus input when open
+ 
   useEffect(() => {
     if (open) inputRef.current?.focus();
   }, [open]);
