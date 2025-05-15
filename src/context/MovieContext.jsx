@@ -1,4 +1,3 @@
-// src/context/MovieContext.jsx
 import React, { createContext, useState, useEffect } from 'react';
 
 export const MovieContext = createContext();
@@ -9,7 +8,6 @@ export const MovieProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Helper to fetch from Salesforce REST API
   const fetchFromSF = async (soql) => {
     const url = `https://null-3f-dev-ed.develop.my.salesforce.com/services/data/v59.0/query?q=${encodeURIComponent(soql)}`;
     const res = await fetch(url, {

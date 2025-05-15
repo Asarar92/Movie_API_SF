@@ -10,9 +10,6 @@ import { MovieContext } from '../context/MovieContext';
 const MovieDetail = () => {
   const { id } = useParams();
   const { movies, castMembers } = useContext(MovieContext)
-  console.log("Movies from context:", movies);
-  console.log("Cast from context:", castMembers);
-  console.log("Movie ID from params:", id);
 
   if (!castMembers) {
     return <div>Loading...</div>;
@@ -41,7 +38,6 @@ const MovieDetail = () => {
   })
   const popularityPct = Math.round(popularity);
   const castList = castMembers.filter((c) => c.Movie__c === movie.Id);
-  console.log(castList)
 
   return (
     <>
